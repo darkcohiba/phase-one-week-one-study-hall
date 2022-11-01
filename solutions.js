@@ -54,3 +54,55 @@ function fizzBuzz(a){
     }
     console.log(array);
 }
+
+
+//create an for an object for a students grades
+const studentGrades = {
+    "John": {
+        "grade": "A",
+        "course": "Computer Science"
+    },
+    "Sarah": {
+        "grade": "B",
+        "course": "Biology"
+    },
+    "Bob": {
+        "grade": "C",
+        "course": "History"
+    }
+}
+
+function courseCheck(name, course){
+    for(var i in studentGrades){
+        if(i === name){
+            if(studentGrades[i].course === course){
+                c(true);
+            }else{
+                c(false);
+            }
+        }
+    }
+}
+
+// courseCheck("Bob", "Computer Science");
+
+//create a function to greet people
+function greeting(name){
+    c(`Hello, ${name}!`);
+}
+
+function leaveMeAlone(name){
+    c(`Please Leave me alone, I am trying to study! ${name}!`);
+}
+
+
+
+function peopleWeLike(name, callBack, secondCallBack){
+    if (name === "Jimmy"){
+        callBack(name);
+    }else{
+        secondCallBack(name);
+    }
+}
+
+peopleWeLike("max", greeting, leaveMeAlone);
